@@ -8,6 +8,17 @@ gem 'rails', '3.2.2'
 gem 'mysql2'
 
 
+# cucumber + rspec = awesome
+group :development, :test do # avoid these gems in production
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'cucumber-rails', "1.1.0", require:false
+	gem 'cucumber'
+	gem "rspec-rails", ">= 2.0.0.beta.17" # gem 'rspec' not needed
+	gem 'spork'
+	gem 'launchy' # So you can do Then show me the page
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
